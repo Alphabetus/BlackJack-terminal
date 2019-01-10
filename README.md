@@ -19,14 +19,14 @@ Note: 'tty-screen' is not _really_ needed. I'm using it to get screen width to m
 
 ## Instructions *with* gem 'tty-screen'
 1. Clone the project to your desired location.
-2. Install GEM with command `$ gem install tty-screen`.
-2. Run game with command `$ ruby /path/to/file/blackjack_terminal.rb`.
+2. Install GEM with command `$gem install "tty-screen"`.
+2. Run game with command `$ruby /path/to/file/blackjack_terminal.rb`.
 3. Have fun!
 
 ## Instructions *without* gem 'tty-screen'
 1. Clone the project to your desired location.
 2. Open `blackjack_terminal.rb` on your favourite text editor.
 3. Comment out `require "tty-screen"`.
-4. Replace `$terminalWidth = TTY::Screen.width` with `$terminalWidth = INTEGER_NUMBER`
-5. Run game with command `$ ruby /path/to/file/blackjack_terminal.rb`.
+4. Replace `$terminalWidth = TTY::Screen.width` with `$terminalWidth = 1`
+5. Run game with command `$ruby /path/to/file/blackjack_terminal.rb`.
 6. Have fun!
