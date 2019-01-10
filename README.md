@@ -1,6 +1,6 @@
 # BlackJack on Ruby > For terminal
 
-This project was created to test my Ruby skills
+This project was created only to test my Ruby skills.  
 It is a simple game will allow you to have some fun on your terminal while playing Blackjack.
 
 ## Features
@@ -17,13 +17,13 @@ It is a simple game will allow you to have some fun on your terminal while playi
 
 Note: 'tty-screen' is not _really_ needed. I'm using it to get screen width to make some separators.  
 
-## Instructions **with** gem 'tty-screen'
+## Instructions *with* gem 'tty-screen'
 1. Clone the project to your desired location.
 2. Install GEM with command `$ gem install tty-screen`.
 2. Run game with command `$ ruby /path/to/file/blackjack_terminal.rb`.
 3. Have fun!
 
-## Instructions **without** gem 'tty-screen'
+## Instructions *without* gem 'tty-screen'
 1. Clone the project to your desired location.
 2. Open `blackjack_terminal.rb` on your favourite text editor.
 3. Comment out `require "tty-screen"`.

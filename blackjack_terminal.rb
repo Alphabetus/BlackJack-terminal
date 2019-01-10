@@ -135,6 +135,7 @@ puts "The main objective is to get as close as possible to 21 without going over
 puts "If you go over you loose. Once you hit stop CPU will play."
 puts "CPU will only ask for card if he his below 17."
 puts "If CPU goes over 21 you automatically win with any value."
+puts "Aces can be worth 1 or 11 points. They change automatically to avoid bursting."
 puts "-" * $terminalWidth
 puts "\n"
 
@@ -218,7 +219,7 @@ if $playerHandValue === 21
   puts "Wow! 21."
 end
 
-if $playerHandValue > 21 && $playerAces11 < 1
+if $playerHandValue > 21
   puts "YOUR HAND: #{myHand}"
   puts "Ups! You bursted your hand. You have #{$playerHandValue} points."
   puts "You lost... Dealer won!\n"
@@ -232,7 +233,6 @@ end
 sleep(1)
 # lets make the dealer play :)
 puts "\nNow it is time for the dealer to reveal his second card and draw...\n"
-# puts "DEALER HAND: #{$dealerHand[0]} #{$dealerHand[1]}"
 
 hisHand = getDealerHand
 sleep(1.0/2.0)
@@ -242,7 +242,6 @@ if $dealerHandValue === 21
 end
 
 if $dealerHandValue > 21
-  # i know that this scenario will never happen, however until i manage to code that A = 11 || A = 1 this can actually occur.
   puts "DEALER HAND: #{hisHand}"
   puts "Dealer has bursted"
 end
@@ -258,7 +257,6 @@ if $dealerHandValue < 17
 end
 sleep(3)
 
-# puts "debug #{$dealerHand}, #{$dealerHandValue}"
 system("clear")
 while $dealerHandValue < 17 do
   # lets get some cleanup here
@@ -324,11 +322,5 @@ else
 
 end
 
-
+#done lets get the user the chance to play again.
 restartGame
-
-# puts giveCardValue(cardList.shuffle[0])
-# cardList.shuffle!
-# puts cardList[0]
-# puts cardList.delete_at(0)
-# puts cardList[0]
