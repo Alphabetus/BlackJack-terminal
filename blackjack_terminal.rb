@@ -196,7 +196,7 @@ while $gameOnPlayer === 1 && $playerHandValue < 21 do
     # lets check if there is an Ace. Because if it is... it can be 1 or 11.
     # so, in here im checking $playerAces11 to check the number of aces that are worth 11 points.
     # If there is any still worth 11 points i remove 1 integer from $playerAces11 and 10 points from $playerHandValue
-    if $playerAces11 > 0
+    if $playerAces11 > 0 && $playerHandValue > 21
       $playerAces11 -= 1
       $playerHandValue -= 10
     end
@@ -266,7 +266,7 @@ while $dealerHandValue < 17 do
   # lets check if there is an Ace. Because if it is... it can be 1 or 11.
   # so, in here im checking $dealerAces11 to check the number of aces that are worth 11 points.
   # If there is any still worth 11 points i remove 1 integer from $dealerAces11 and 10 points from $dealerHandValue
-  if $dealerAces11 > 0
+  if $dealerAces11 > 0 && $dealerHandValue > 21
     $dealerAces11 -= 1
     $dealerHandValue -= 10
   end
